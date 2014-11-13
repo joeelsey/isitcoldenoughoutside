@@ -10,9 +10,8 @@ app.listen(app.get('port'), function() {
 });
 
 app.get('/', function(req, res){
-  res.send('Add your state and city to the end of the url in the following format:  "/state initials/city name"\n
-    If entered correctly you should see the temp for where you live.');
-})
+  res.json({msg:'add state and city to the end of the url /state/city to get temp'});
+});
 
 app.get('/:state/:city', function(req, res) {
   var key = 'b40a0fca31859481'
