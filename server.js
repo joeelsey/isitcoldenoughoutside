@@ -4,6 +4,10 @@ var express = require('express');
 var request = require('superagent');
 var app = express();
 
+app.set('port', process.env.PORT || 3000);
+app.listen(app.get('port'), function() {
+  console.log('server running on port: ' + app.get('port'));
+});
 
 app.get('/:city', function(req, res) {
   var key = 'b40a0fca31859481'
@@ -19,7 +23,4 @@ app.get('/:city', function(req, res) {
     });
 });
 
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'), function() {
-  console.log('server running on port: ' + app.get('port'));
-});
+
