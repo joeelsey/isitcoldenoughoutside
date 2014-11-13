@@ -6,7 +6,6 @@ var app = express();
 
 
 app.get('/:city', function(req, res) {
-  //var weatherUrl = "http://www.wunderground.com/?apiref=fca0fd6081216f5b";
   var key = 'b40a0fca31859481'
   var weatherUrl = 'http://api.wunderground.com/api/' + key +
                     '/conditions/q/WA/' + req.params.city + '.json';
