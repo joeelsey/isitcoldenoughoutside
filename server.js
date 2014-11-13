@@ -9,10 +9,10 @@ app.listen(app.get('port'), function() {
   console.log('server running on port: ' + app.get('port'));
 });
 
-app.get('/:city', function(req, res) {
+app.get('/:state/:city', function(req, res) {
   var key = 'b40a0fca31859481'
   var weatherUrl = 'http://api.wunderground.com/api/' + key +
-                    '/conditions/q/WA/' + req.params.city + '.json';
+                    '/conditions/q/' + req.params.state + "/" + req.params.city + '.json';
 
   request
     .get(weatherUrl)
