@@ -1,11 +1,12 @@
 $(document).ready(function(){
-  $('#submit').on('click', function(){
-    addURL();
+  $('#button').on('click', function(){
+    process();
+  });
 });
 
-function addURL(){
-  var zip = document.getElementById('yourzip').value;
-  var url = window.location.href;
-
-  return url + '/' + zip;
-};
+function process() {
+  var zip = document.getElementById('zip').value;
+  var url = 'http://localhost:3000/zip/' + zip;
+  console.log(url);
+  return url;
+}

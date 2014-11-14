@@ -1,17 +1,17 @@
 <doctype! html>
 <html>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="index.js"></script> -->
   <head>
     <title></title>
   </head>
     <body>
-      <form action="http://localhost:3000/zip/" method: 'POST'>
-        <div id='message_txt'>
+      <form onSubmit="process();">
+        <div>
           <lable>Your zip code</label>
-          <input type='text' name='' id='yourzip'>
-          <input type='submit' value='submit' id='submit'>
+          <input type='text' id='zip'>
+          <button id='button'>
         </div>
       </form>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
