@@ -27,12 +27,13 @@ app.get('/:zip', function(req, res) {
       if (err) res.status(500).send(err);
       var parsedData = JSON.parse(weatherdata.text);
       var temp = parsedData.current_observation.temp_f;
+      var hot = ' and its too warm to store beer outside.';
+      var cold = ' and its cold enough to store beer outside.';
       if(temp < 50 ){
-        res.json({'temp in your city': temp + ' and its cold enough to store beer outside.'});
+        res.json({msg: 'temp in your city is ' + temp + cold});
       } else {
-        res.json({'temp in your city': temp + ' and its too warm to store beer outside.'})
-      }
-      
+        res.json({msg: 'temp in your city is ' + temp + hot})
+      } 
     });
 });
 
