@@ -9,7 +9,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/zip/:zip', function(req, res) {
-  var zip = document.getElementById('zip').value;
+  //var zip = document.getElementById('zip').value;
   var key = 'b40a0fca31859481'
   var weatherUrl = 'http://api.wunderground.com/api/' + key +
                     '/conditions/q/' + req.params.zip + '.json';
