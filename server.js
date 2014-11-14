@@ -5,7 +5,7 @@ var request = require('superagent');
 var app = express();
 
 app.get('/', function(req, res){
-  res.json({msg:'add zip code to the end of the url to get temp.  Ex: /zip/yourzip'});
+  res.json({msg:'add zip code to the url to get temp.  Ex: /zip/yourzip'});
 });
 
 app.get('/zip/:zip', function(req, res) {
