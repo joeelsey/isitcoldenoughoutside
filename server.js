@@ -4,6 +4,11 @@ var express = require('express');
 var request = require('superagent');
 var app = express();
 
+app.use(function(err,req,res,next){
+  console.err(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 app.get('/', function(req, res){
   res.json({msg:'add zip code to the url to get temp.  Ex: /zip/yourzip'});
 });
@@ -24,9 +29,11 @@ app.get('/zip/:zip', function(req, res) {
       var cold = ' and its cold enough to store beer outside.';
       if(temp < 50 ){
         res.json({msg: 'temp in your city is ' + temp + cold});
+      } else if (temp > 50) {
+        res.json({msg: 'temp in your city is ' + temp + hot});
       } else {
-        res.json({msg: 'temp in your city is ' + temp + hot})
-      } 
+        res.json({msg: 'Not a valid zip.  Please retry.'});
+      }
     });
 });
 app.use(express.static(__dirname + '/public'));
