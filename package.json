@@ -1,9 +1,9 @@
 {
   "name": "isitcoldenoughoutside",
   "version": "1.0.0",
-  "engines":{
+  "engines": {
     "node": "0.10.x"
-    },
+  },
   "description": "isitcoldenoughoutside =====================",
   "main": "server.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/joeelsey/isitcoldenoughoutside",
   "dependencies": {
     "express": "^4.10.2",
+    "jade": "^1.7.0",
     "request": "^2.48.0",
     "superagent": "^0.21.0"
   },
