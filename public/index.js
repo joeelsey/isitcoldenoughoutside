@@ -1,10 +1,12 @@
 $(document).ready(function() {
   $('#button').on('click', function() {
-    var zip = document.getElementById('zip').value;
+    showZip();
   });
 });
 
 function showZip() {
-  return zip;
-};
-console.log(zip);
+  var zip = document.getElementById('zip').value;
+  console.log(zip);
+}
+console.log(zip,'the zip');
+console.log('hello');
