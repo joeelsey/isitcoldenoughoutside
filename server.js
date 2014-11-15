@@ -28,7 +28,7 @@ app.use(function(req,res,next){
 app.get('/zip/:zip', function(req, res) {
   //var zip = document.getElementById('zip').value;
   var key = 'b40a0fca31859481'
-  var weatherUrl = 'https://api.wunderground.com/api/' + key +
+  var weatherUrl = 'https://www.wunderground.com/api/' + key +
     '/conditions/q/' + req.params.zip + '.json';
 
 
