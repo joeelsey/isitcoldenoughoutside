@@ -11,7 +11,7 @@ $(document).on('ready', function() {
     $.ajax({
       type: 'GET',
       dataType: 'text',
-      url: 'https://www.wunderground.com/api/' + key + '/conditions/q/' + ZipCode,
+      url: 'https://www.wunderground.com/api/' + key + '/conditions/q/' + ZipCode + '.json',
       success: function(data) {
         $('#answer').html(data);
       }
