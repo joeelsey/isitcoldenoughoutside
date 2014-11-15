@@ -1,9 +1,10 @@
-(document).ready(function(){
-  $('#submit').on('click', function(){
-    $.ajax({
-      url:'localhost:3000/zip/',
-      type: 'POST'
-      
-    });
+$(document).ready(function() {
+  $('#button').on('click', function() {
+    var zip = document.getElementById('zip').value;
   });
-}());
+});
+
+function showZip() {
+  return zip;
+};
+console.log(zip);
