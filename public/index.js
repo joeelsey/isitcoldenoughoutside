@@ -10,7 +10,7 @@ $(document).on('ready', function() {
     $.ajax({
       type: 'GET',
       dataType: 'text',
-      url: 'https://quiet-sea-5014.herokuapp.com/' + 'zip/' + ZipCode,
+      url: 'https://coldenoughforbeer.herokuapp.com/' + 'zip/' + ZipCode,
       success: function(data) {
         $('#answer').html(data);
       }
