@@ -2,6 +2,7 @@
 
 $(document).on('ready', function() {
   var ZipCode = 1;
+  var key = 'b40a0fca31859481'
   $('#SetZipCode').click(function() {
     var ZipCode = document.getElementById('GetZipCode').value;
     $('#GetZipCode').val(" ");
@@ -10,7 +11,7 @@ $(document).on('ready', function() {
     $.ajax({
       type: 'GET',
       dataType: 'text',
-      url: 'https://localhost:3000/zip/' + ZipCode,
+      url: 'http://api.wunderground.com/api/' + key + '/conditions/q/' + ZipCode + '.json',
       success: function(data) {
         $('#answer').html(data);
       }
@@ -18,3 +19,4 @@ $(document).on('ready', function() {
 
   });
 });
+//url: 'https://localhost:3000/zip/'
