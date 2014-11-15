@@ -1,3 +1,5 @@
+//var $ = require('jquery-latest');
+
 $(document).on('ready', function() {
   var ZipCode = 1;
   $('#SetZipCode').click(function() {
