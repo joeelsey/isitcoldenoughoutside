@@ -42,11 +42,11 @@ app.get('/zip/:zip', function(req, res) {
       var cold = ' and its cold enough to store beer outside.';
       if (temp < 50) {
         res.json({
-          msg: 'temp in your city is ' + temp + cold
+          msg: 'temp in your city is ' + temp + 'F°' + cold
         });
       } else if (temp > 50) {
         res.json({
-          msg: 'temp in your city is ' + temp + hot
+          msg: 'temp in your city is ' + temp + 'F°' + hot
         });
       } else {
         res.json({
