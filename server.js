@@ -56,6 +56,10 @@ app.get('/zip/:zip', function(req, res) {
     });
 });
 
+app.post('/zip', function(req, res){
+  var html = '<div>this is a div</div>'
+});
+
 app.use(express.static(__dirname + '/public'));
 app.get('/public', function(req, res) {
   res.redirect('/index.html');

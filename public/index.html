@@ -4,11 +4,12 @@
     <title></title>
   </head>
     <body>
-      <form onSubmit="process();">
+      <form method:'POST'>
         <div>
           <lable>Your zip code</label>
-          <input type='text' id='zip'>
-          <button id='button'>
+          <input type='text' id='zip' value='submit'>
+          <button type='submit' value='submit' id='submit'></button>
+            <div id='ans'></div>
         </div>
       </form>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
