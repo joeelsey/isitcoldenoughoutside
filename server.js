@@ -6,12 +6,12 @@ var app = express();
 var createDomain = require('domain').create;
 
 //https://speakerdeck.com/felixge/domains-in-node-08
-app.use(function(req,res,next){
+app.use(function(req, res, next) {
   var domain = createDomain();
 
-  domain.on('error', function(err){
+  domain.on('error', function(err) {
     res.end('wrong zip');
-    console.log(err.message)
+    console.log(err.message);
     domain.dispose();
   });
 
@@ -27,10 +27,9 @@ app.use(function(req,res,next){
 
 app.get('/zip/:zip', function(req, res) {
   //var zip = document.getElementById('zip').value;
-  var key = 'b40a0fca31859481'
+  var key = 'b40a0fca31859481';
   var weatherUrl = 'http://api.wunderground.com/api/' + key +
     '/conditions/q/' + req.params.zip + '.json';
-
 
   request
     .get(weatherUrl)
@@ -54,10 +53,6 @@ app.get('/zip/:zip', function(req, res) {
         });
       }
     });
-});
-
-app.post('/zip', function(req, res){
-  var html = '<div>this is a div</div>'
 });
 
 app.use(express.static(__dirname + '/public'));
