@@ -2,7 +2,6 @@
 
 $(document).on('ready', function() {
   var ZipCode = 1;
-  var key = 'b40a0fca31859481'
   $('#SetZipCode').click(function() {
     var ZipCode = document.getElementById('GetZipCode').value;
     $('#GetZipCode').val(" ");
@@ -11,7 +10,7 @@ $(document).on('ready', function() {
     $.ajax({
       type: 'GET',
       dataType: 'text',
-      url: 'https://www.wunderground.com/api/' + key + '/conditions/q/' + ZipCode + '.json',
+      url: 'https://quiet-sea-5014.herokuapp.com/' + 'zip/' + ZipCode,
       success: function(data) {
         $('#answer').html(data);
       }
