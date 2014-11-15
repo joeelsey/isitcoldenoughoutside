@@ -5,12 +5,6 @@ var request = require('superagent');
 var app = express();
 var createDomain = require('domain').create;
 
-
-app.use(express.static(__dirname + '/public'));
-app.get('/public', function(req, res) {
-  res.redirect('/index.html');
-
-});
 //https://speakerdeck.com/felixge/domains-in-node-08
 app.use(function(req,res,next){
   var domain = createDomain();
@@ -62,12 +56,10 @@ app.get('/zip/:zip', function(req, res) {
     });
 });
 
-app.get('*', function(req, res, next){
-  var err = new Error();
-  err.status = 404;
-  next(err);
+app.use(express.static(__dirname + '/public'));
+app.get('/public', function(req, res) {
+  res.redirect('/index.html');
 });
-
 
 app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function() {
