@@ -10,7 +10,7 @@ $(document).on('ready', function() {
     $.ajax({
       type: 'GET',
       dataType: 'text',
-      url: 'http://localhost:3000/zip/' + ZipCode,
+      url: 'https://localhost:3000/zip/' + ZipCode,
       success: function(data) {
         $('#answer').html(data);
       }
