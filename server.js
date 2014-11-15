@@ -19,11 +19,11 @@ app.use(function(req,res,next){
   next();
 });
 
-app.get('/', function(req, res) {
+/*app.get('/', function(req, res) {
   res.json({
     msg: 'add zip code to the url to get temp.  Ex: /zip/yourzip'
   });
-});
+});*/
 
 app.get('/zip/:zip', function(req, res) {
   //var zip = document.getElementById('zip').value;
