@@ -1,5 +1,3 @@
-//var $ = require('jquery-latest');
-
 $(document).on('ready', function() {
   var ZipCode = 1;
   $('#SetZipCode').click(function() {
@@ -10,7 +8,7 @@ $(document).on('ready', function() {
     $.ajax({
       type: 'GET',
       dataType: 'text',
-      url: 'https://coldenoughforbeer.herokuapp.com/' + 'zip/' + ZipCode,
+      url: 'https://coldenoughforbeer.herokuapp.com/zip/' + ZipCode,
       success: function(data) {
         $('#answer').html(data);
       }
@@ -18,4 +16,3 @@ $(document).on('ready', function() {
 
   });
 });
-//url: 'https://localhost:3000/zip/'

@@ -19,14 +19,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-/*app.get('/', function(req, res) {
-  res.json({
-    msg: 'add zip code to the url to get temp.  Ex: /zip/yourzip'
-  });
-});*/
-
 app.get('/zip/:zip', function(req, res) {
-  //var zip = document.getElementById('zip').value;
   var key = 'b40a0fca31859481';
   var weatherUrl = 'http://api.wunderground.com/api/' + key +
     '/conditions/q/' + req.params.zip + '.json';
