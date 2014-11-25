@@ -12,7 +12,7 @@ describe('test for beer temp outside', function(){
       .get('zip/98188')
       .end(function(err,res){
         expect(err).to.eql(null);
-        expect(res.body.msg).to.not.eql(undefined);
+        expect(res.body.msg).to.not.equal(undefined);
         done();
       });
     });
