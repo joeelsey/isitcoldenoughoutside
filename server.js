@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/zip/:zip', function(req, res) {
-  var key = 'b40a0fca31859481';
+  var key = process.env.WUNDER_API;
   var weatherUrl = 'http://api.wunderground.com/api/' + key +
     '/conditions/q/' + req.params.zip + '.json';
 
